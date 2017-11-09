@@ -2,8 +2,8 @@ const employeeFactory = require('./employeeFactory.js');
 
 const divisionHead = function(){
     let id = "d-"+random().digit(8);
-    let workers = discreteRangeIn(20,300);
-    let baseSalary = discreteRangeIn(10,25)*10;
+    let workers = random().discreteRangeIn(20,300);
+    let baseSalary = random().discreteRangeIn(10,25)*10;
     function = pay(){
         let yearlypay = baseSalary;
         if(workers > 19){
@@ -15,8 +15,10 @@ const divisionHead = function(){
         }
         let dailypay = baseSalary/365;
         let weeklypay = baseSalary/52
-    }
+
    return paydivisonHead;
+   }
+   return (id,managers,workers,baseSalary);
 };
 
-module.exports = moduleName;
+module.exports = divisionHead;

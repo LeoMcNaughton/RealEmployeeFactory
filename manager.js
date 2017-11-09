@@ -2,8 +2,8 @@ const employeeFactory = require('./employeeFactory.js');
 
 const manager = function(){
  let id = "m-"+random().digit(8);
- let workers = discreteRangeIn(4,20);
- let baseSalary = discreteRangeIn(4,9)*10;
+ let workers = random().discreteRangeIn(4,20);
+ let baseSalary = random().discreteRangeIn(4,9)*10;
 
  function = pay(){
 
@@ -21,6 +21,7 @@ const manager = function(){
 
      return paymanager;
  }
+ return (pay,id,workers,baseSalary);
 };
 
-module.exports = moduleName;
+module.exports = manager;

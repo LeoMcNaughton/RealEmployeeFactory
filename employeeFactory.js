@@ -2,25 +2,26 @@ const client = require('./client.js');
 const worker = require('./worker.js');
 const divisionHead = require('./divisionHead.js');
 const contractor = require('./contractor.js');
- 
+
 const employeeFactory = function(){
 
 
      function create(type);{
          if(type == "worker"){
-             return;
+             return worker();
          }
-         else if(type == "client"){
-             return;
+         else if(type == "manager"){
+             return manger();
          }
+
          else if(type == "divisionHead"){
-             return;
+             return divisionHead();
          }
          else if(type == "contractor"){
-             return;
+             return contractor();
          }
      }
-
+return {create};
 };
 
-module.exports = moduleName;
+module.exports = employeeFactory;
